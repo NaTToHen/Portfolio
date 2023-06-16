@@ -31,6 +31,14 @@ header {
    backdrop-filter: blur(10px);
 }
 
+.logo {
+   transition: all ease-in-out .2s;
+}
+
+.logo:hover {
+   transform: scale(1.05);
+}
+
 .poligonosInicio {
    position: absolute;
    left: 0;
@@ -55,20 +63,20 @@ ul {
 }
 
 .navBar li::after {
-      content: '';
-      position: absolute;
-      width: 0px;
-      height: 3px; 
-      left: 0%;
-      bottom:0;
-      background-image: url(/img/mesh-326.png);
-      transition: all ease-in-out .2s;
+   content: '';
+   position: absolute;
+   width: 0px;
+   height: 3px;
+   left: 0%;
+   bottom: 0;
+   background-image: url(/img/mesh-326.png);
+   transition: all ease-in-out .2s;
 }
 
 .navBar li:hover::after {
    width: 100%;
    left: 0;
- }
+}
 
 .navBar li:nth-child(4) {
    margin-right: 0px;
@@ -91,7 +99,7 @@ ul {
 
 li #contatoBtn {
    background: url(/img/fundoBtnContato.svg);
-   color: #ffffff;
+   color: #000000;
    padding: 7px 12px;
    border-radius: 8px;
 }
@@ -128,9 +136,9 @@ li #contatoBtn {
 .tituloInicio {
    font-size: 48px;
    background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-	background-image: url("/img/mesh-326.png");
+   -webkit-background-clip: text;
+   color: transparent;
+   background-image: url("/img/mesh-326.png");
 }
 
 .poligonosInicio {
@@ -182,4 +190,157 @@ li #contatoBtn {
 
 .linkedin {
    margin-right: 20px;
+}
+
+/* tecnologias */
+
+#tecnologias {
+   width: 100%;
+   min-height: 350px;
+   padding: 20px;
+}
+
+.Ttec {
+   margin-left: 5%;
+}
+
+.Tprojetos {
+   margin-left: 5%;
+}
+
+.minhasTec {
+   width: 70%;
+   margin: auto;
+   margin-top: 5%;
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   grid-column-gap: 10px;
+   grid-row-gap: 1em;
+}
+
+/* PROJETOS */
+
+#projetos {
+   background: rgba(0, 0, 0, 0.37);
+   padding: 20px;
+}
+
+#projetos .botoes {
+   margin: auto;
+   width: 90%;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+#projetos .btnActive {
+   background: #439AFF;
+}
+
+#projetos .botoes button {
+   position: relative;
+   color: rgb(0, 0, 0);
+   font-size: 16px;
+   cursor: pointer;
+   width: 110px;
+   height: 38px;
+   border-radius: 8px;
+   border: none;
+   background: #ffffff99;
+}
+
+/*#projetos .botoes button::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   border-radius: 8px;
+   padding: 2px;
+   background: radial-gradient(circle, hsla(163, 100%, 77%, 1) 0%, hsla(212, 75%, 49%, 1) 100%) border-box;
+   -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+   -webkit-mask-composite: xor;
+   mask-composite: exclude;
+}*/
+
+#projetos .botoes button:nth-child(1) {
+   margin-right: 20px;
+}
+
+/*radial-gradient(circle, hsla(163, 100%, 77%, 1) 0%, hsla(212, 75%, 49%, 1) 100%)*/
+
+.projetosDiv {
+   display: grid;
+   margin: auto;
+   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+   grid-template-rows: auto;
+   grid-gap: 30px;
+   max-width: 90%;
+}
+
+.cardProjeto {
+   position: relative;
+   width: 320px;
+   height: 240px;
+   object-fit: fill;
+   background: url(/img/fundoCard.svg);
+   border-radius: 20px;
+   margin: auto;
+   transition: all ease-in-out .2s;
+}
+
+.conteudoCard {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 0;
+   background: #0000004d;
+   backdrop-filter: blur(10px);
+   border-radius: 0 0 20px 20px;
+   transition: all ease-in-out .2s;
+   opacity: 0%;
+}
+
+.cardProjeto:hover {
+   transform: scale(1.05);
+   .conteudoCard {
+      opacity: 100%;
+      height: 45%;
+   }
+   .conteudoCard p {
+      opacity: 100%;
+   }
+   .conteudoCard button {
+      opacity: 100%;
+   }
+}
+
+.conteudoCard p {
+   color: rgba(255, 255, 255, 0.478);
+   width: 100%;
+   text-align: center;
+   font-size: 25px;
+   margin-top: 12px;
+   opacity: 0%;
+}
+
+.conteudoCard button {
+   opacity: 0%;
+   position: relative;
+   cursor: pointer;
+   margin-top: 10px;
+   margin-left: 25.5%;
+   background: rgba(255, 255, 255, 0.255);
+   color: rgba(255, 255, 255, 0.629);
+   border: none;
+   text-align: center;
+   font-size: 16px;
+   border-radius: 7px;
+   width: 150px;
+   height: 30px;
+   transition: all ease-in-out .2s;
+}
+
+.conteudoCard button:hover {
+   background: rgba(255, 255, 255, 0.523);
 }
