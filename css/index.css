@@ -7,14 +7,66 @@
    font-family: 'Hammersmith One', sans-serif;
 }
 
-body {
-   overflow-y: scroll;
+html {
    scroll-behavior: smooth;
+}
+
+body {
    width: 100%;
    height: 100vh;
    background-image: url(/img/fundo\ site\ gradient.png);
    background-repeat: no-repeat;
    background-size: cover;
+}
+
+::-webkit-scrollbar {
+   width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #001a37;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #0051ad;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #003b7d;
+}
+
+#topo {
+   position: fixed;
+   bottom: 30px;
+   right: 30px;
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background: #0000004d;
+   backdrop-filter: blur(10px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: all ease-in-out .2s;
+}
+
+.btnTopo {
+   position: absolute;
+   top: 40%;
+   border: solid #439AFF;
+   border-width: 0px 7px 7px 0px;
+   padding: 5px;
+   display: inline-block;
+}
+
+.up {
+   transform: rotate(-135deg);
+   -webkit-transform: rotate(-135deg);
 }
 
 /* HEADER */
@@ -25,8 +77,13 @@ header {
    display: flex;
    justify-content: space-around;
    align-items: center;
-   height: 13vh;
+   height: 15vh;
    width: 100%;
+   transition: all ease-in-out .2s;
+}
+
+.fundoHeader {
+   height: 13vh;
    background: #0000004d;
    backdrop-filter: blur(10px);
 }
@@ -133,7 +190,7 @@ li #contatoBtn {
    color: white;
 }
 
-.tituloInicio {
+.tituloInicio, .tituloSobre {
    font-size: 48px;
    background-clip: text;
    -webkit-background-clip: text;
@@ -141,8 +198,37 @@ li #contatoBtn {
    background-image: url("/img/mesh-326.png");
 }
 
+.tituloInicio::after {
+   content: '|';
+   margin-left: 8px;
+   color:aqua;
+   animation: barra .8s linear infinite;
+}
+
+@keyframes barra {
+   from{
+      opacity: 1;
+   }
+   to{
+      opacity: 0;
+   }
+}
+
 .poligonosInicio {
    z-index: 0;
+}
+
+.fotoInicio, .fotoSobre {
+   animation: flutua 4s ease-in-out infinite;
+}
+
+@keyframes flutua {
+   0%, 100% {
+      transform: translateY(0px);
+   }
+   50% {
+      transform: translateY(-12px);
+   }
 }
 
 /* SOBRE */
@@ -150,7 +236,7 @@ li #contatoBtn {
 #sobre {
    display: flex;
    align-items: center;
-   padding-top: 13vh;
+
    min-height: 100vh;
    background: rgba(0, 0, 0, 0.37);
 }
@@ -232,10 +318,6 @@ li #contatoBtn {
    margin-bottom: 20px;
 }
 
-#projetos .btnActive {
-   background: #439AFF;
-}
-
 #projetos .botoes button {
    position: relative;
    color: rgb(0, 0, 0);
@@ -246,6 +328,15 @@ li #contatoBtn {
    border-radius: 8px;
    border: none;
    background: #ffffff99;
+   transition: all ease-in-out .2s;
+}
+
+#projetos .botoes button:hover {
+   transform: scale(1.05);
+}
+
+.btnActive {
+   background: #439AFF;
 }
 
 /*#projetos .botoes button::before {
@@ -275,6 +366,7 @@ li #contatoBtn {
    grid-template-rows: auto;
    grid-gap: 30px;
    max-width: 90%;
+   margin-bottom: 50px;
 }
 
 .cardProjeto {
@@ -343,4 +435,111 @@ li #contatoBtn {
 
 .conteudoCard button:hover {
    background: rgba(255, 255, 255, 0.523);
+}
+
+/* CONTATO */
+
+#contato {
+   min-height: 75vh;
+}
+
+#contato img {
+   margin-top: 20px;
+   margin-left: 5%;
+}
+
+.conteudoContato {
+   margin-top: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.contatoForm {
+   height: 300px;
+}
+
+.contatoForm input {
+   background: #000000;
+   padding: 10px;
+   margin: auto;
+   margin-bottom: 20px;
+   width: 90%;
+   border: solid 2px #005cc5;
+   border-radius: 8px;
+   color: white;
+   height: 40px;
+}
+
+.contatoForm textarea {
+   background: #000000;
+   padding: 10px;
+   color: white;
+   margin: auto;
+   width: 90%;
+   border: solid 2px #005cc5;
+   border-radius: 8px;
+   min-height: 90px;
+   max-height: 90px;
+   max-width: 90%;
+   min-width: 90%;
+}
+
+.contatoForm button {
+   cursor: pointer;
+   width: 90%;
+   color: white;
+   font-size: 17px;
+   margin-top: 15px;
+   height: 40px;
+   background: #003b7d;
+   border: none;
+   border-radius: 10px;
+   transition: all ease-in-out .2s;
+}
+
+.contatoForm button:hover {
+   height: 43px;
+}
+
+/* FOOTER */
+
+footer {
+   display: flex;
+   background: rgba(0, 0, 0, 0.37);
+   padding: 30px;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.footerLinks li {
+   list-style: none;
+   margin-bottom: 5px;
+}
+
+.footerLinks li:nth-child(4) {
+   margin-bottom: 0px;
+}
+
+.footerLinks li a {
+   font-size: 18px;
+   text-decoration: none;
+   color: #009DFF;
+}
+
+.footerLinks li a:hover {
+   color: #ffffff;
+}
+
+.linksFooter {
+   display: flex;
+   align-items: center;
+}
+
+.linksFooter a {
+   transition: all ease-in-out .2s;
+}
+
+.linksFooter a:hover {
+   transform: scale(1.05);
 }
