@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 
 * {
    margin: 0;
@@ -156,7 +157,7 @@ ul {
 
 li #contatoBtn {
    background: url(/img/fundoBtnContato.svg);
-   color: #000000;
+   color: #BFE1FD;
    padding: 7px 12px;
    border-radius: 8px;
 }
@@ -256,7 +257,10 @@ li #contatoBtn {
 }
 
 .textoSobre {
-   font-size: 35px;
+   width: 90%;
+   text-align: justify;
+   font-family: 'Nunito', sans-serif;
+   font-size: 25px;
    color: white;
 }
 
@@ -291,6 +295,7 @@ li #contatoBtn {
 }
 
 .Tprojetos {
+   margin-bottom: 50px;
    margin-left: 5%;
 }
 
@@ -307,6 +312,7 @@ li #contatoBtn {
 /* PROJETOS */
 
 #projetos {
+   position: relative;
    background: rgba(0, 0, 0, 0.37);
    padding: 20px;
 }
@@ -437,6 +443,93 @@ li #contatoBtn {
    background: rgba(255, 255, 255, 0.523);
 }
 
+/* MODAL PROJETO */
+
+.modal {
+   width: 75%;
+   height: 450px;
+   position: absolute;
+   z-index: 16;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+   display: flex;
+}
+
+.modal .esquerda {
+   display: flex;
+   align-items: center;
+   width: 40%;
+   height: 100%;
+   background: #282828;
+}
+
+.modal .direita {
+   padding: 20px;
+   width: 60%;
+   height: 100%;
+   background: #414141;
+   color: rgb(181, 181, 181);
+}
+
+.sairModal {
+   cursor: pointer;
+   text-decoration: none;
+   padding: 8px 15px;
+   border-radius: 5px;
+   color: #a3a3a3;
+   background: #4a4a4a;
+   float: right;
+}
+
+.modal .direita .nome {
+   margin-top: 20px;
+   font-size: 30px;
+}
+
+.modal .direita .desc {
+   width: 100%;
+   margin-top: 15px;
+   height: 270px;
+}
+
+.modal .direita .link {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 15px;
+}
+
+.modal .direita .link nav {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal .direita .link nav p {
+   border-radius: 5px;
+   padding: 5px;
+   color: #4a4a4a;
+   background: #a3a3a3;
+}
+
+.modal .direita .link a {
+   cursor: pointer;
+   text-decoration: none;
+   padding: 8px 15px;
+   border-radius: 5px;
+   color: #a3a3a3;
+   background: #4a4a4a;
+}
+
+hr {
+   margin-top: 5px;
+   border-color: #949494;
+}
+
+.modalYalle .esquerda img {
+   object-fit: fill;
+   width: 100%;
+}
+
 /* CONTATO */
 
 #contato {
@@ -460,7 +553,8 @@ li #contatoBtn {
 }
 
 .contatoForm input {
-   background: #000000;
+   font-family: 'Courier New', Courier, monospace;
+   background: #00000079;
    padding: 10px;
    margin: auto;
    margin-bottom: 20px;
@@ -472,7 +566,8 @@ li #contatoBtn {
 }
 
 .contatoForm textarea {
-   background: #000000;
+font-family: 'Courier New', Courier, monospace;
+   background: #00000079;
    padding: 10px;
    color: white;
    margin: auto;
@@ -508,8 +603,15 @@ footer {
    display: flex;
    background: rgba(0, 0, 0, 0.37);
    padding: 30px;
-   justify-content: space-around;
+   justify-content: center;
    align-items: center;
+}
+
+.footerLinks {
+   margin-right: 100px;
+   display: flex;
+   width: 30%;
+   justify-content: space-around;
 }
 
 .footerLinks li {
@@ -524,16 +626,17 @@ footer {
 .footerLinks li a {
    font-size: 18px;
    text-decoration: none;
-   color: #009DFF;
+   color: #003b7d;
 }
 
 .footerLinks li a:hover {
-   color: #ffffff;
+   color: #002169;
 }
 
 .linksFooter {
    display: flex;
    align-items: center;
+   margin-right: 100px;
 }
 
 .linksFooter a {
@@ -542,4 +645,8 @@ footer {
 
 .linksFooter a:hover {
    transform: scale(1.05);
+}
+
+footer p {
+   color: #003b7d;
 }

@@ -1,3 +1,10 @@
+//modal
+const abrirYalle = document.querySelector('.abrirYalle');
+const modalYalle = document.querySelector('.modalYalle');
+
+abrirYalle.onclick = function() {
+   modalYalle.showModal();
+}
 
 //efeito maquina
 const texto = document.querySelector(".tituloInicio");
