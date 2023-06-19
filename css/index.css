@@ -10,13 +10,14 @@
 
 html {
    scroll-behavior: smooth;
+   overflow-x: hidden;
 }
 
 body {
    width: 100%;
    height: 100vh;
    background-image: url(/img/fundo\ site\ gradient.png);
-   background-repeat: no-repeat;
+   background-repeat: repeat;
    background-size: cover;
 }
 
@@ -162,6 +163,54 @@ li #contatoBtn {
    border-radius: 8px;
 }
 
+.menuMobile {
+   cursor: pointer;
+   display: none;
+}
+
+@media (max-width: 768px) {
+   .navBar {
+      position: fixed;
+      left: -110%;
+      top: 13vh;
+      margin: 0;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      transition: .5s;
+      background: #0000004d;
+      backdrop-filter: blur(10px);
+   }
+
+   .navBar ul {
+      text-align: center;
+      flex-direction: column;
+   }
+
+   .navBar li {
+      margin: 0;
+      margin-top: 10px;
+   }
+
+   li #contatoBtn {
+      margin-bottom: 10px;
+      background: none repeat;
+   }
+
+   .navBar li::after {
+      display: none;
+   }
+
+   .menuMobile {
+      display: block;
+   }
+
+   .navBar.active {
+      left: 0;
+   }
+
+}
+
 /* INICIO */
 
 #inicio {
@@ -237,7 +286,6 @@ li #contatoBtn {
 #sobre {
    display: flex;
    align-items: center;
-
    min-height: 100vh;
    background: rgba(0, 0, 0, 0.37);
 }
@@ -386,6 +434,10 @@ li #contatoBtn {
    transition: all ease-in-out .2s;
 }
 
+.projeto2 {
+   background: url(/img/em\ desenvolvimento.svg);
+}
+
 .conteudoCard {
    position: absolute;
    left: 0;
@@ -445,12 +497,20 @@ li #contatoBtn {
 
 /* MODAL PROJETO */
 
-.modal {
+dialog::backdrop {
+   background-color: #00000077;
+}
+
+dialog {
+   border: none;
+   margin: auto;
    width: 75%;
+}
+
+.modal {
+   position: relative;
+   width: 100%;
    height: 450px;
-   position: absolute;
-   z-index: 16;
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
    display: flex;
 }
 
@@ -459,15 +519,20 @@ li #contatoBtn {
    align-items: center;
    width: 40%;
    height: 100%;
-   background: #282828;
+   background: #000000;
 }
 
 .modal .direita {
    padding: 20px;
    width: 60%;
    height: 100%;
-   background: #414141;
-   color: rgb(181, 181, 181);
+   background-image: url(/img/fundo\ site\ gradient.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: #ffffff;
+}
+.sair {
+   display: none;
 }
 
 .sairModal {
@@ -475,8 +540,8 @@ li #contatoBtn {
    text-decoration: none;
    padding: 8px 15px;
    border-radius: 5px;
-   color: #a3a3a3;
-   background: #4a4a4a;
+   color: #ffffff;
+   background: #003473;
    float: right;
 }
 
@@ -486,6 +551,7 @@ li #contatoBtn {
 }
 
 .modal .direita .desc {
+   font-family: 'Nunito', sans-serif;
    width: 100%;
    margin-top: 15px;
    height: 270px;
@@ -507,8 +573,8 @@ li #contatoBtn {
 .modal .direita .link nav p {
    border-radius: 5px;
    padding: 5px;
-   color: #4a4a4a;
-   background: #a3a3a3;
+   color: #ffffff;
+   background: #004498;
 }
 
 .modal .direita .link a {
@@ -516,8 +582,8 @@ li #contatoBtn {
    text-decoration: none;
    padding: 8px 15px;
    border-radius: 5px;
-   color: #a3a3a3;
-   background: #4a4a4a;
+   color: #ffffff;
+   background: #004498;
 }
 
 hr {
@@ -649,4 +715,89 @@ footer {
 
 footer p {
    color: #003b7d;
+}
+
+@media (max-width: 768px) {
+   #inicio .esquerda {
+      width: 100%;
+   }
+
+   #inicio .direita {
+      display: none;
+   }
+
+   #sobre .direita {
+      margin: auto;
+      width: 90%;
+   }
+
+   #sobre .esquerda {
+      display: none;
+   }
+
+   .textoSobre {
+      width: 100%;
+   }
+
+   #tecnologias {
+      min-height: 230px;
+   }
+
+   .Ttec {
+      margin: auto;
+   }
+
+   .minhasTec {
+      align-items: center;
+      width: 90%;
+   }
+
+   .minhasTec img {
+      max-width: 60px;
+   }
+
+   .Tprojetos {
+      margin: auto;
+      margin-bottom: 40px;
+   }
+
+   .sair {
+      display: block;
+   }
+
+   .sairModal {
+      display: none;
+   }
+
+   dialog .modal {
+      flex-direction: column;
+   }
+
+   .modal .esquerda, .modal .direita {
+      width: 100%;
+   }
+
+   #contato .esquerda img {
+      max-width: 170px;
+   }
+
+   #contato .direita {
+      margin-left: 50px;
+   }
+
+   footer {
+      margin-left: 0;
+      margin-right: 0;
+      justify-content: center;
+      flex-direction: column;
+   }
+
+   .footerLinks {
+      margin: 0;
+      gap: 15px;
+   }
+
+   .linksFooter {
+      margin-right: 0;
+   }
 }

@@ -1,10 +1,23 @@
+//responsivo
+const menuMobile = document.querySelector('.menuMobile');
+const nav = document.querySelector('.navBar');
+
+menuMobile.addEventListener('click', () => {
+   nav.classList.toggle('active');
+});
+
 //modal
 const abrirYalle = document.querySelector('.abrirYalle');
+const fecharModal = document.querySelector('.sairModal');
 const modalYalle = document.querySelector('.modalYalle');
 
 abrirYalle.onclick = function() {
    modalYalle.showModal();
 }
+fecharModal.onclick = function() {
+   modalYalle.close();
+}
+
 
 //efeito maquina
 const texto = document.querySelector(".tituloInicio");
