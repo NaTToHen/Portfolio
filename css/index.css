@@ -34,7 +34,6 @@ body {
 ::-webkit-scrollbar-thumb {
    background: #0051ad;
    cursor: pointer;
-   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -498,7 +497,8 @@ li #contatoBtn {
 /* MODAL PROJETO */
 
 dialog::backdrop {
-   background-color: #00000077;
+   background: #0000004d;
+   backdrop-filter: blur(10px);
 }
 
 dialog {
@@ -632,7 +632,7 @@ hr {
 }
 
 .contatoForm textarea {
-font-family: 'Courier New', Courier, monospace;
+   font-family: 'Courier New', Courier, monospace;
    background: #00000079;
    padding: 10px;
    color: white;
@@ -762,7 +762,21 @@ footer p {
    }
 
    .sair {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      padding: 10px 0px;
+      height: 30px;
+      width: 100%;
+      background: #002754;
+      backdrop-filter: blur(10px);
+      color: white;
+   }
+
+   .sair a {
+      cursor: pointer;
+      padding: 5px 8px;
+      background-color: #003b7d;
    }
 
    .sairModal {
@@ -775,6 +789,27 @@ footer p {
 
    .modal .esquerda, .modal .direita {
       width: 100%;
+   }
+
+
+   .modal .direita .link nav {
+      gap: 8px;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 10px;
+   }
+
+   .modal .direita .link a {
+      text-align: center;
+      min-width: 80px;
+      font-size: 12px;
+      height: 26px;
+      background-color: #00238e;
+      padding: 4px;
+   }
+
+   .modal .direita .link nav p {
+      font-size: 12px;
    }
 
    #contato .esquerda img {

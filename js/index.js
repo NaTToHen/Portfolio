@@ -9,12 +9,17 @@ menuMobile.addEventListener('click', () => {
 //modal
 const abrirYalle = document.querySelector('.abrirYalle');
 const fecharModal = document.querySelector('.sairModal');
+const fecharMobile = document.querySelector('.sair');
 const modalYalle = document.querySelector('.modalYalle');
 
 abrirYalle.onclick = function() {
    modalYalle.showModal();
 }
 fecharModal.onclick = function() {
+   modalYalle.close();
+}
+
+fecharMobile.onclick = function() {
    modalYalle.close();
 }
 
