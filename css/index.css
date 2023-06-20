@@ -17,7 +17,7 @@ body {
    width: 100%;
    height: 100vh;
    background-image: url(/img/fundo\ site\ gradient.png);
-   background-repeat: repeat;
+   background-repeat: repeat-y;
    background-size: cover;
 }
 
@@ -86,7 +86,7 @@ header {
 .fundoHeader {
    height: 13vh;
    background: #0000004d;
-   backdrop-filter: blur(10px);
+   backdrop-filter: blur(8px);
 }
 
 .logo {
@@ -835,4 +835,56 @@ footer p {
    .linksFooter {
       margin-right: 0;
    }
+}
+
+.logoMobile {
+   display: none;
+}
+
+@media (max-width: 500px) {
+   body {
+      background-size: cover;
+   }
+
+   header {
+      margin-left: 0;
+      margin-right: 0;
+      justify-content: space-around;
+   }
+
+   .tituloInicio {
+      font-size: clamp(2rem, 2.25rem, 3.5rem);
+   }
+
+   .textoInicio {
+      font-size: clamp(1.7rem, 2rem, 2.5rem);
+   }
+
+   .logo {
+      display: none;
+   }
+
+   .logoMobile {
+      display: block;
+   }
+
+   .Tprojetos, .Ttec, .Tcontato {
+      width: 50%;
+   }
+
+   .minhasTec {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 1em;
+      margin: auto;
+   }
+
+   #contato .esquerda {
+      display: none;
+   }
+
+   .footerBaixo {
+      display: none;
+   }
+
 }

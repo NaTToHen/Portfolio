@@ -18,7 +18,6 @@ abrirYalle.onclick = function() {
 fecharModal.onclick = function() {
    modalYalle.close();
 }
-
 fecharMobile.onclick = function() {
    modalYalle.close();
 }
@@ -27,7 +26,7 @@ fecharMobile.onclick = function() {
 //efeito maquina
 const texto = document.querySelector(".tituloInicio");
 function maquinaEscrever(elemento) {
-   const textoArray = elemento.innerHTML.split('');
+   const textoArray = elemento.innerHTML.split('');//cada letra vira um indice da array
    elemento.innerHTML = '';
    textoArray.forEach((letra, i) => {
       setTimeout(function() {
