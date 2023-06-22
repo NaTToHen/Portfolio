@@ -177,7 +177,7 @@ li #contatoBtn {
       flex-direction: column;
       width: 100%;
       transition: .5s;
-      background: #0000004d;
+      background: #000000ad;
       backdrop-filter: blur(10px);
    }
 
@@ -339,6 +339,7 @@ li #contatoBtn {
 
 .Ttec {
    margin-left: 5%;
+   margin-bottom: 20px;
 }
 
 .Tprojetos {
@@ -350,6 +351,7 @@ li #contatoBtn {
    width: 70%;
    margin: auto;
    margin-top: 5%;
+   margin-bottom: 40px;
    display: grid;
    grid-template-columns: repeat(6, 1fr);
    grid-column-gap: 10px;
@@ -861,22 +863,27 @@ footer p {
    }
 
    .logo {
-      display: none;
+      width: 70%;
    }
 
    .logoMobile {
-      display: block;
+      display: none;
    }
 
-   .Tprojetos, .Ttec, .Tcontato {
+   .Ttec {
       width: 50%;
+   }
+   
+   .Tprojetos, .Tcontato {
+      width: 40%;
    }
 
    .minhasTec {
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 10px;
       grid-row-gap: 1em;
-      margin: auto;
+      margin-top: 40px;
+      margin-left: 10%;
    }
 
    #contato .esquerda {
