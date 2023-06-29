@@ -54,6 +54,7 @@ body {
    align-items: center;
    cursor: pointer;
    transition: all ease-in-out .2s;
+   z-index: 5000;
 }
 
 .btnTopo {
@@ -85,7 +86,7 @@ header {
 
 .fundoHeader {
    height: 13vh;
-   background: #0000004d;
+   background: #00000067;
    backdrop-filter: blur(8px);
 }
 
@@ -168,6 +169,9 @@ li #contatoBtn {
 }
 
 @media (max-width: 768px) {
+   .fundoHeader {
+      background: #000000c7;
+   }
    .navBar {
       position: fixed;
       left: -110%;
@@ -177,7 +181,7 @@ li #contatoBtn {
       flex-direction: column;
       width: 100%;
       transition: .5s;
-      background: #000000ad;
+      background: #000000c7;
       backdrop-filter: blur(10px);
    }
 
@@ -239,7 +243,8 @@ li #contatoBtn {
    color: white;
 }
 
-.tituloInicio, .tituloSobre {
+.tituloInicio,
+.tituloSobre {
    font-size: 48px;
    background-clip: text;
    -webkit-background-clip: text;
@@ -250,15 +255,16 @@ li #contatoBtn {
 .tituloInicio::after {
    content: '|';
    margin-left: 8px;
-   color:aqua;
+   color: aqua;
    animation: barra .8s linear infinite;
 }
 
 @keyframes barra {
-   from{
+   from {
       opacity: 1;
    }
-   to{
+
+   to {
       opacity: 0;
    }
 }
@@ -267,14 +273,18 @@ li #contatoBtn {
    z-index: 0;
 }
 
-.fotoInicio, .fotoSobre {
+.fotoInicio,
+.fotoSobre {
    animation: flutua 4s ease-in-out infinite;
 }
 
 @keyframes flutua {
-   0%, 100% {
+
+   0%,
+   100% {
       transform: translateY(0px);
    }
+
    50% {
       transform: translateY(-12px);
    }
@@ -454,13 +464,16 @@ li #contatoBtn {
 
 .cardProjeto:hover {
    transform: scale(1.05);
+
    .conteudoCard {
       opacity: 100%;
       height: 45%;
    }
+
    .conteudoCard p {
       opacity: 100%;
    }
+
    .conteudoCard button {
       opacity: 100%;
    }
@@ -505,6 +518,7 @@ dialog::backdrop {
 
 dialog {
    border: none;
+   outline: none;
    margin: auto;
    width: 75%;
 }
@@ -528,11 +542,12 @@ dialog {
    padding: 20px;
    width: 60%;
    height: 100%;
-   background-image: url(/img/fundo\ site\ gradient.png);
+   background: rgb(18, 18, 18);
    background-repeat: no-repeat;
    background-size: cover;
    color: #ffffff;
 }
+
 .sair {
    display: none;
 }
@@ -543,7 +558,7 @@ dialog {
    padding: 8px 15px;
    border-radius: 5px;
    color: #ffffff;
-   background: #003473;
+   background: #02005d;
    float: right;
 }
 
@@ -566,26 +581,25 @@ dialog {
 }
 
 .modal .direita .link nav {
-  display: flex;
-  width: 50%;
-  justify-content: space-around;
-  align-items: center;
+   display: flex;
+   width: 50%;
+   justify-content: space-around;
+   align-items: center;
 }
 
 .modal .direita .link nav p {
    border-radius: 5px;
    padding: 5px;
-   color: #ffffff;
-   background: #004498;
+   color: #000000;
+   background: #ffffff;
 }
 
 .modal .direita .link a {
    cursor: pointer;
    text-decoration: none;
-   padding: 8px 15px;
+   padding: 5px 10px;
    border-radius: 5px;
-   color: #ffffff;
-   background: #004498;
+   background: #02005d;
 }
 
 hr {
@@ -770,7 +784,7 @@ footer p {
       padding: 10px 0px;
       height: 30px;
       width: 100%;
-      background: #002754;
+      background: #282828;
       backdrop-filter: blur(10px);
       color: white;
    }
@@ -789,7 +803,8 @@ footer p {
       flex-direction: column;
    }
 
-   .modal .esquerda, .modal .direita {
+   .modal .esquerda,
+   .modal .direita {
       width: 100%;
    }
 
@@ -806,7 +821,7 @@ footer p {
       min-width: 80px;
       font-size: 12px;
       height: 26px;
-      background-color: #00238e;
+      background-color: #ffffff;
       padding: 4px;
    }
 
@@ -873,9 +888,14 @@ footer p {
    .Ttec {
       width: 50%;
    }
-   
-   .Tprojetos, .Tcontato {
+
+   .Tprojetos,
+   .Tcontato {
       width: 40%;
+   }
+
+   .modal .link a {
+      display: none !important;
    }
 
    .minhasTec {
