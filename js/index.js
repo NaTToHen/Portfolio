@@ -7,19 +7,40 @@ menuMobile.addEventListener('click', () => {
 });
 
 //modal
-const abrirYalle = document.querySelector('.abrirYalle');
-const fecharModal = document.querySelector('.sairModal');
+const fecharModalYalle = document.querySelector('.YalleSair');
+const fecharModalCalcula = document.querySelector('.CalculaSair');
 const fecharMobile = document.querySelector('.sair');
+
+const abrirYalle = document.querySelector('.abrirYalle');
 const modalYalle = document.querySelector('.modalYalle');
 
-abrirYalle.onclick = function() {
-   modalYalle.showModal();
-}
-fecharModal.onclick = function() {
-   modalYalle.close();
-}
-fecharMobile.onclick = function() {
-   modalYalle.close();
+const modalCalculaGasto = document.querySelector('.modalCalculaGasto')
+const abrirCalculaGasto = document.querySelector('.abrirCalculaGasto')
+
+function abreModal(modal) {
+
+   if(modal == "modalYalle") {
+      abrirYalle.onclick = function() {
+         modalYalle.showModal();
+      }
+      fecharModalYalle.onclick = function() {
+         modalYalle.close();
+      }
+      fecharMobile.onclick = function() {
+         modalYalle.close();
+      }
+   } else if(modal == "modalCalculaGasto") {
+      abrirCalculaGasto.onclick = function() {
+         modalCalculaGasto.showModal();
+      }
+      fecharModalCalcula.onclick = function() {
+         modalCalculaGasto.close();
+      }
+      fecharMobile.onclick = function() {
+         modalCalculaGasto.close();
+      }
+   }
+
 }
 
 

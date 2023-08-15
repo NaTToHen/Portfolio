@@ -446,7 +446,7 @@ li #contatoBtn {
 }
 
 .projeto2 {
-   background: url(/img/em\ desenvolvimento.svg);
+   background: url(/img/fundoCalculaGasto.svg);
 }
 
 .conteudoCard {
@@ -558,7 +558,7 @@ dialog {
    padding: 8px 15px;
    border-radius: 5px;
    color: #ffffff;
-   background: #02005d;
+   background: #008cff;
    float: right;
 }
 
@@ -583,13 +583,13 @@ dialog {
 .modal .direita .link nav {
    display: flex;
    width: 50%;
-   justify-content: space-around;
-   align-items: center;
+   align-items: start;
 }
 
 .modal .direita .link nav p {
    border-radius: 5px;
    padding: 5px;
+   margin-right: 1%;
    color: #000000;
    background: #ffffff;
 }
@@ -599,7 +599,7 @@ dialog {
    text-decoration: none;
    padding: 5px 10px;
    border-radius: 5px;
-   background: #02005d;
+   background: #008cff;
 }
 
 hr {

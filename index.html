@@ -79,7 +79,7 @@
                <img src="/img/YalleFoto.png">
             </div>
             <div class="direita">
-               <a class="sairModal">X</a>
+               <a class="sairModal YalleSair">X</a>
                <div class="conteudoModal">
                   <p class="nome">Livraria Yalle</p>
                   <hr>
@@ -100,6 +100,33 @@
             </div>
          </div>
       </dialog>
+
+      <dialog class="modalCalculaGasto">
+         <div class="modal">
+            <div class="sair"><a>X</a></div>
+            <div class="esquerda">
+               <img src="/img/fundoDireitaCalcula.png" width="100%">
+            </div>
+            <div class="direita">
+               <a class="sairModal CalculaSair">X</a>
+               <div class="conteudoModal">
+                  <p class="nome">CalculaGasto</p>
+                  <hr>
+                  <p class="desc">Aplicativo de finanças pessoais, simples, e facil de utilizar, atualmente esta em ALPHA</p>
+                  <hr>
+                  <div class="link">
+                     <nav>
+                        <p class="tec">Kotlin</p>
+                        <p class="tec">Firebase</p>
+                        <p class="tec">Firestore</p>
+                     </nav>
+                     <a href="https://github.com/NaTToHen/CalculaGasto" target="_blank"><img src="/img/githubLogo.svg" alt="" width="20px"></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </dialog>
+
       <img class="Tprojetos" src="/img/tituloProjetos.svg">
       <!---<div class="botoes">
          <button class="btnActive">Front-end</button>
@@ -109,12 +136,13 @@
          <div class="cardProjeto">
             <div class="conteudoCard">
                <p>Livraria Yalle</p>
-               <button class="abrirYalle">Saiba mais</button>
+               <button class="abrirYalle" onclick="abreModal('modalYalle')">Saiba mais</button>
             </div>
          </div>
          <div class="cardProjeto projeto2">
             <div class="conteudoCard">
-               <p>Em desenvolvimento</p>
+               <p>Calcula Gasto</p>
+               <button class="abrirCalculaGasto" onclick="abreModal('modalCalculaGasto')">Saiba mais</button>
             </div>
          </div>
 
