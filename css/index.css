@@ -615,7 +615,7 @@ hr {
 /* CONTATO */
 
 #contato {
-   min-height: 75vh;
+   min-height: 60vh;
 }
 
 #contato img {
@@ -764,8 +764,9 @@ footer p {
    }
 
    .minhasTec {
-      align-items: center;
-      width: 90%;
+      display: flex;
+      justify-content: center;
+      width: 100%;
    }
 
    .minhasTec img {
