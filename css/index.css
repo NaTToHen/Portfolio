@@ -449,6 +449,10 @@ li #contatoBtn {
    background: url(/img/fundoCalculaGasto.svg);
 }
 
+.projeto3 {
+   background: url(/img/em\ desenvolvimento.svg);
+}
+
 .conteudoCard {
    position: absolute;
    left: 0;
@@ -904,7 +908,6 @@ footer p {
       grid-column-gap: 10px;
       grid-row-gap: 1em;
       margin-top: 40px;
-      margin-left: 10%;
    }
 
    #contato .esquerda {
