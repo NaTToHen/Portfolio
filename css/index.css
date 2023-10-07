@@ -374,7 +374,6 @@ li #contatoBtn {
 #projetos {
    position: relative;
    background: rgba(0, 0, 0, 0.37);
-   padding: 20px;
 }
 
 .projetosDiv {
@@ -408,6 +407,12 @@ li #contatoBtn {
 
 .projeto3 {
    background-image: url(/img/imgCalculaSiteFundo.svg);
+   background-repeat: repeat-y;
+   background-size: cover;
+}
+
+.projeto4 {
+   background-image: url(/img/imgRouteLogFundo.svg);
    background-repeat: repeat-y;
    background-size: cover;
 }
@@ -459,7 +464,7 @@ li #contatoBtn {
    font-size: 16px;
    color: #161616be;
    text-align: center;
-   margin: 0px 5px;
+   margin: 0px 8px;
 }
 
 .conteudoCard button {
@@ -590,6 +595,11 @@ hr {
 }
 
 .modalYalle .esquerda img {
+   object-fit: fill;
+   width: 100%;
+}
+
+.modalRouteLog .esquerda img {
    object-fit: fill;
    width: 100%;
 }
@@ -747,7 +757,6 @@ footer p {
    }
 
    .minhasTec {
-      display: flex;
       justify-content: center;
       width: 100%;
    }
@@ -873,6 +882,15 @@ footer p {
       width: 50%;
    }
 
+   #projetos {
+      padding-bottom: 20px;
+   }
+
+   .Tprojetos {
+      margin-left: 20px;
+      margin-top: 20px;
+   }
+
    .Tprojetos,
    .Tcontato {
       width: 40%;
@@ -886,6 +904,7 @@ footer p {
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 10px;
       grid-row-gap: 1em;
+      justify-items: center;
       margin-top: 40px;
    }
 

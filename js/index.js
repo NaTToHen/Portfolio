@@ -10,10 +10,12 @@ menuMobile.addEventListener('click', () => {
 const fecharModalYalle = document.querySelector('.YalleSair');
 const fecharModalCalcula = document.querySelector('.CalculaSair');
 const fecharModalCalculoSite = document.querySelector('.CalculaSiteSair')
+const fecharModalRouteLog = document.querySelector('.RouteLogSair')
 
 const fecharMobileYalle = document.querySelector('.sairMobileYalle');
 const fecharMobileCalcula = document.querySelector('.sairMobileCalcula');
 const fecharMobileCalculoSite = document.querySelector('.sairMobileCalculaSite')
+const fecharMobileRouteLog = document.querySelector('.sairMobileRouteLog');
 
 const abrirYalle = document.querySelector('.abrirYalle');
 const modalYalle = document.querySelector('.modalYalle');
@@ -23,6 +25,9 @@ const abrirCalculaGasto = document.querySelector('.abrirCalculaGasto')
 
 const modalCalculaSite = document.querySelector('.modalCalculaSite')
 const abrirCalculaSite = document.querySelector('.abrirCalculaSite')
+
+const abrirRouteLog = document.querySelector('.abrirRouteLog');
+const modalRouteLog = document.querySelector('.modalRouteLog');
 
 function abreModal(modal) {
 
@@ -56,6 +61,16 @@ function abreModal(modal) {
       fecharMobileCalculoSite.onclick = function() {
          modalCalculaSite.close();
       }
+   } else if(modal == "modalRouteLog") {
+      abrirRouteLog.onclick = function() {
+         modalRouteLog.showModal();
+      }
+      fecharModalRouteLog.onclick = function() {
+         modalRouteLog.close();
+      }
+      fecharMobileRouteLog.onclick = function() {
+         modalRouteLog.close();
+      }
    }
 }
 
@@ -63,7 +78,7 @@ function abreModal(modal) {
 //efeito maquina
 const texto = document.querySelector(".tituloInicio");
 function maquinaEscrever(elemento) {
-   const textoArray = elemento.innerHTML.split('');//cada letra vira um indice da array
+   const textoArray = elemento.innerHTML.split('');
    elemento.innerHTML = '';
    textoArray.forEach((letra, i) => {
       setTimeout(function() {
