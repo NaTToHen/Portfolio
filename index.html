@@ -34,7 +34,7 @@
          <div class="textosInicio">
             <p class="textoInicio">Olá. Sou um</p>
             <h3 class="tituloInicio">Desenvolvedor Web</h3>
-            <p class="textoInicio">Javascript | PHP</p>
+            <p class="textoInicio">Javascript | PHP | Laravel</p>
          </div>
       </div>
       <div class="direita">
@@ -49,8 +49,12 @@
       <div class="direita">
          <div class="textosInicio">
             <h3 class="tituloSobre">Quem eu sou?</h3>
-            <p class="textoSobre">Olá, tenho 20 anos, atualmente sou um estudante de Ciência da Computação, pretendo
-               seguir na carreira de desenvolvedor, que é oque eu sempre quis ser.</p>
+            <p class="textoSobre">Meu nome é Henrique tenho 20 anos, sou um Desenvolvedor Mobile/Web e sou apaixonado por desenvolver novas soluções, 
+               comecei minha jornada na área de tecnologia em 2022 quando entrei na faculdade, hoje já obtive 
+               uma pequena, mas muito produtiva experiencia em um Estágio focado em DevOps e Cloud, aonde produzi
+               pequenos projetos com AWS e docker. Também possuo alguns projetos pessoais. Agora pretendo 
+               me desenvolver ainda mais como profissional.
+            </p>
             <div class="linksSobre"><a class="linkedin" href="https://www.linkedin.com/in/henrique-b-918335211/"
                   target="_blank"><img src="../img/linkedinLogo.svg" alt=""></a><a target="_blank" href="https://www.instagram.com/henrique_natto/"><img
                      src="/img/instagramLogo.svg" alt=""></a>
@@ -66,6 +70,7 @@
          <img src="/img/logoCSS.svg" alt="" class="iconeTec">
          <img src="/img/logoJS.svg" alt="" class="iconeTec">
          <img src="/img/logoPHP.svg" alt="" class="iconeTec">
+         <img src="/img/logoLaravel.svg" alt="" class="iconeTec">
          <img src="/img/logoAndroid.svg" alt="" class="iconeTec">
       </div>
    </article>
@@ -83,7 +88,12 @@
                   <p class="nome">Livraria Yalle</p>
                   <hr>
                   <p class="desc">Trabalho acadêmico construído para projeto integrador, com a finalidade de construção
-                     de um sistema completo de gerenciamento totalmente funcional e seguro.</p>
+                     de um sistema completo de gerenciamento totalmente funcional e seguro.<br><br>
+                  <b>Funcionalidades:</b><br>
+                  - Registro/Update/Excluir livros e usuarios<br>
+                  - Compra de produtos e sistema de vendas<br>
+                  - Carrinho de compras(em desenvolvimento)<br>
+                  - Relatórios em PDF</p>
                   <hr>
                   <div class="link">
                      <nav>
@@ -127,29 +137,62 @@
          </div>
       </dialog>
 
+      <dialog class="modalCalculaSite">
+         <div class="modal">
+            <div class="sair sairMobileCalculaSite"><a>X</a></div>
+            <div class="esquerda">
+               <img src="/img/projeto3Fundo.svg" width="100%">
+            </div>
+            <div class="direita">
+               <a class="sairModal CalculaSiteSair">X</a>
+               <div class="conteudoModal">
+                  <p class="nome">calculagasto.com</p>
+                  <hr>
+                  <p class="desc">Landing Page para o aplicativo CalculaGasto</p>
+                  <hr>
+                  <div class="link">
+                     <nav>
+                        <p class="tec">HTML</p>
+                        <p class="tec">CSS</p>
+                        <p class="tec">JavaScript</p>
+                     </nav>
+                     <div>
+                        <a href="https://github.com/NaTToHen/calculagasto.com" target="_blank"><img src="/img/githubLogo.svg" class="linkGit" alt="" width="20px"></a>
+                        <a href="https://calculagasto.com" target="_blank" class="linkSite">Acessar Site</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </dialog>
+
       <img class="Tprojetos" src="/img/tituloProjetos.svg">
       <!---<div class="botoes">
          <button class="btnActive">Front-end</button>
          <button>Back-end</button>
       </div>-->
       <div class="projetosDiv">
-         <div class="cardProjeto">
+         <div class="cardProjeto projeto1">
             <div class="conteudoCard">
-               <p>Livraria Yalle</p>
+               <p class="tituloProjeto">Livraria Yalle</h2>
+               <p class="textoProjeto">Trabalho acadêmico construído para projeto integrador, com a finalidade de construção
+                  de um sistema completo de gerenciamento totalmente funcional e seguro.</p>
                <button class="abrirYalle" onclick="abreModal('modalYalle')">Saiba mais</button>
             </div>
          </div>
          <div class="cardProjeto projeto2">
             <div class="conteudoCard">
-               <p>Calcula Gasto</p>
+               <p class="tituloProjeto">Calcula Gasto</h2>
+                <p class="textoProjeto">Aplicativo de finanças pessoais, simples, e facil de utilizar, atualmente esta em ALPHA</p>
                <button class="abrirCalculaGasto" onclick="abreModal('modalCalculaGasto')">Saiba mais</button>
             </div>
          </div>
 
          <div class="cardProjeto projeto3">
             <div class="conteudoCard">
-               <p>CalculaGasto.com (em desenvolvimento)</p>
-               <!--<button class="abrirCalculaGasto" onclick="abreModal('modalCalculaGasto')">Saiba mais</button>-->
+               <p class="tituloProjeto">Calculagasto.com</h2>
+               <p class="textoProjeto">Landing Page para o aplicativo CalculaGasto</p>
+               <button class="abrirCalculaSite" onclick="abreModal('modalCalculaSite')">Saiba mais</button>
             </div>
          </div>
 
@@ -163,7 +206,7 @@
             <img src="/img/contatoAviao.svg" alt="">
          </div>
          <div class="direita">
-            <form action="https://formsubmit.co/contato@henriquebonatto.com.br" class="contatoForm" method="post">
+            <form action="https://formsubmit.co/henriquebonatto008@hotmail.com" class="contatoForm" method="post">
                <input type="hidden" name="_next" value="https://henriquebonatto.com.br/">
                <input type="hidden" name="_captcha" value="false">
                <input type="text" placeholder="Assunto" name="assunto">
@@ -185,7 +228,7 @@
       <div>
          <div class="linksFooter">
             <a class="linkedin" href="https://www.linkedin.com/in/henrique-b-918335211/" target="_blank"><img
-                  src="../img/linkedinLogo.svg" alt="" width="40px"></a>
+               src="../img/linkedinLogo.svg" alt="" width="40px"></a>
             <a href=""><img src="/img/instagramLogo.svg" alt="" width="50px"></a>
          </div>
       </div>

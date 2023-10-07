@@ -9,15 +9,20 @@ menuMobile.addEventListener('click', () => {
 //modal
 const fecharModalYalle = document.querySelector('.YalleSair');
 const fecharModalCalcula = document.querySelector('.CalculaSair');
+const fecharModalCalculoSite = document.querySelector('.CalculaSiteSair')
 
 const fecharMobileYalle = document.querySelector('.sairMobileYalle');
 const fecharMobileCalcula = document.querySelector('.sairMobileCalcula');
+const fecharMobileCalculoSite = document.querySelector('.sairMobileCalculaSite')
 
 const abrirYalle = document.querySelector('.abrirYalle');
 const modalYalle = document.querySelector('.modalYalle');
 
 const modalCalculaGasto = document.querySelector('.modalCalculaGasto')
 const abrirCalculaGasto = document.querySelector('.abrirCalculaGasto')
+
+const modalCalculaSite = document.querySelector('.modalCalculaSite')
+const abrirCalculaSite = document.querySelector('.abrirCalculaSite')
 
 function abreModal(modal) {
 
@@ -41,8 +46,17 @@ function abreModal(modal) {
       fecharMobileCalcula.onclick = function() {
          modalCalculaGasto.close();
       }
+   } else if(modal == "modalCalculaSite") {
+      abrirCalculaSite.onclick = function() {
+         modalCalculaSite.showModal();
+      }
+      fecharModalCalculoSite.onclick = function() {
+         modalCalculaSite.close();
+      }
+      fecharMobileCalculoSite.onclick = function() {
+         modalCalculaSite.close();
+      }
    }
-
 }
 
 
