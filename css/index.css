@@ -381,7 +381,7 @@ li #contatoBtn {
    margin: auto;
    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
    grid-template-rows: auto;
-   grid-gap: 30px;
+   grid-gap: 60px;
    max-width: 90%;
    margin-bottom: 50px;
 }
@@ -413,6 +413,12 @@ li #contatoBtn {
 
 .projeto4 {
    background-image: url(/img/imgRouteLogFundo.svg);
+   background-repeat: repeat-y;
+   background-size: cover;
+}
+
+.projeto5 {
+   background-image: url(/img/imgCoffeeSWFundo.svg);
    background-repeat: repeat-y;
    background-size: cover;
 }
@@ -600,6 +606,11 @@ hr {
 }
 
 .modalRouteLog .esquerda img {
+   object-fit: fill;
+   width: 100%;
+}
+
+.modalCoffeeSW .esquerda img {
    object-fit: fill;
    width: 100%;
 }

@@ -29,47 +29,62 @@ const abrirCalculaSite = document.querySelector('.abrirCalculaSite')
 const abrirRouteLog = document.querySelector('.abrirRouteLog');
 const modalRouteLog = document.querySelector('.modalRouteLog');
 
+const modalCoffeeSW = document.querySelector('.modalCoffeeSW')
+const fecharModalCoffeeSW = document.querySelector('.CoffeeSWSair')
+const fecharMobileCoffeeSW = document.querySelector('.sairMobileCoffeeSW')
+const abrirCoffeeSW = document.querySelector('.abrirCoffeeSW')
+
 function abreModal(modal) {
 
-   if(modal == "modalYalle") {
-      abrirYalle.onclick = function() {
+   if (modal == "modalYalle") {
+      abrirYalle.onclick = function () {
          modalYalle.showModal();
       }
-      fecharModalYalle.onclick = function() {
+      fecharModalYalle.onclick = function () {
          modalYalle.close();
       }
-      fecharMobileYalle.onclick = function() {
+      fecharMobileYalle.onclick = function () {
          modalYalle.close();
       }
-   } else if(modal == "modalCalculaGasto") {
-      abrirCalculaGasto.onclick = function() {
+   } else if (modal == "modalCalculaGasto") {
+      abrirCalculaGasto.onclick = function () {
          modalCalculaGasto.showModal();
       }
-      fecharModalCalcula.onclick = function() {
+      fecharModalCalcula.onclick = function () {
          modalCalculaGasto.close();
       }
-      fecharMobileCalcula.onclick = function() {
+      fecharMobileCalcula.onclick = function () {
          modalCalculaGasto.close();
       }
-   } else if(modal == "modalCalculaSite") {
-      abrirCalculaSite.onclick = function() {
+   } else if (modal == "modalCalculaSite") {
+      abrirCalculaSite.onclick = function () {
          modalCalculaSite.showModal();
       }
-      fecharModalCalculoSite.onclick = function() {
+      fecharModalCalculoSite.onclick = function () {
          modalCalculaSite.close();
       }
-      fecharMobileCalculoSite.onclick = function() {
+      fecharMobileCalculoSite.onclick = function () {
          modalCalculaSite.close();
       }
-   } else if(modal == "modalRouteLog") {
-      abrirRouteLog.onclick = function() {
+   } else if (modal == "modalRouteLog") {
+      abrirRouteLog.onclick = function () {
          modalRouteLog.showModal();
       }
-      fecharModalRouteLog.onclick = function() {
+      fecharModalRouteLog.onclick = function () {
          modalRouteLog.close();
       }
-      fecharMobileRouteLog.onclick = function() {
+      fecharMobileRouteLog.onclick = function () {
          modalRouteLog.close();
+      }
+   } else if (modal == "modalCoffeeSW") {
+      abrirCoffeeSW.onclick = function () {
+         modalCoffeeSW.showModal();
+      }
+      fecharModalCoffeeSW.onclick = function () {
+         modalCoffeeSW.close();
+      }
+      fecharMobileCoffeeSW.onclick = function () {
+         modalCoffeeSW.close();
       }
    }
 }
@@ -81,7 +96,7 @@ function maquinaEscrever(elemento) {
    const textoArray = elemento.innerHTML.split('');
    elemento.innerHTML = '';
    textoArray.forEach((letra, i) => {
-      setTimeout(function() {
+      setTimeout(function () {
          elemento.innerHTML += letra;
       }, 300 * i);
    });
@@ -96,7 +111,7 @@ btnTopo.addEventListener('click', () => {
 document.addEventListener('scroll', ocultaBtn);
 
 function ocultaBtn() {
-   if(window.scrollY > 10) {
+   if (window.scrollY > 10) {
       btnTopo.style.display = 'flex';
    } else {
       btnTopo.style.display = 'none';
@@ -105,7 +120,7 @@ function ocultaBtn() {
 ocultaBtn();
 
 //efeito header
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
    const header = document.querySelector('#header');
    header.classList.toggle('fundoHeader', window.scrollY > 20);
 });
